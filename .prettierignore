@@ -1,0 +1,6 @@
+#Global
+node_modules/
+dist/
+
+#Remote Container
+.docker/zsh/history/.zsh_his
