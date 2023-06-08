@@ -1,4 +1,4 @@
-#_Issue_
+# #_Issue_
 
 _Incluir um resumo da alteração e qual problema foi corrigido. Inclua também motivação e contexto relevantes. Liste todas as dependências necessárias para essa alteração_.
 
@@ -18,11 +18,15 @@ _Descrever os testes que você executou para verificar suas alterações._
 
 _Informe detalhes relevantes para sua configuração de teste._
 
-## Checklist
+## ✅ Checklist
 
-- [ ] O código segue as diretrizes de estilo deste projeto.
-- [ ] Realizar a auto-revisão do código.
-- [ ] Eu comentei meu código, principalmente em áreas difíceis de entender.
-- [ ] Feita a alterações correspondentes na documentação.
-- [ ] Alterações geram novos avisos para equipe.
-- [ ] Mescladas e publicadas as dependencias.
+- [ ] O código segue as convenções deste projeto.
+- [ ] Realizei a auto-revisão do código.
+- [ ] Documentei as alterações correspondentes.
+- [ ] Comentei o codigo em partes com complexidade alta.
+- [ ] Foram mescladas e publicadas todas as dependencias.
+
+### ⚠️ Notificações para equipe
+
+- [ ] **BREAKING CHANGE**: Esse código possuí alterações no código é incompatível com versões anteriores do sistema.
+- [ ] Essa entrega possuí tasks bloqueantes.

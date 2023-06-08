@@ -1,7 +1,13 @@
 {
-  "name": "clean-arch-nestjs-environment",
-  "version": "0.0.0",
+  "name": "project-name",
   "description": "this repository is a starter template for nodejs with typescript projects",
+  "version": "0.0.0",
+  "author": "Ferreira Felipe",
+  "license": "ISC",
+  "workspaces": [
+    "./src/@core",
+    "./src/nestjs"
+  ],
   "scripts": {
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --forceExit",
     "test:staged": "npm run test -- --findRelatedTests",
@@ -9,10 +15,11 @@
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "npm run lint --fix",
     "formatter:check": "prettier --check 'src/**/*.ts'",
-    "formatter:fix": "prettier --write 'src/**/*.ts'"
+    "formatter:fix": "prettier --write 'src/**/*.ts'",
+    "core": "npm run -w @project-name/core",
+    "nestjs": "npm run -w @project-name/nestjs",
+    "start:dev": "npm run -w @project-name/core build:watch && npm run -w @project-name/nestjs start:dev"
   },
-  "author": "Ferreira Felipe",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
@@ -33,5 +40,9 @@
     "prettier": "^2.8.4",
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "class-validator": "^0.14.0",
+    "class-transformer": "^0.5.1"
   }
 }

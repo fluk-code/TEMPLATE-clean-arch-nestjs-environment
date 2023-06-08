@@ -17,15 +17,24 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'eslint-plugin-import-helpers', 'prettier'],
   rules: {
-    '@typescript-eslint/ban-ts-comment': 'off',
     'import-helpers/order-imports': [
-      'warn',
+      'error',
       {
         newlinesBetween: 'always',
-        groups: ['module', '/^#seedwork/', ['parent', 'sibling', 'index']],
-        alphabetize: { order: 'asc', ignoreCase: true },
+        groups: [
+          'module',
+          '/^@nestjs/',
+          '/^@core/',
+          '/^@/',
+          '/^#shared/',
+          '/^#*/',
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: { order: 'asc', ignoreCase: false },
       },
     ],
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/ban-ts-comment': 'off',
     'no-console': 'warn',
     'prettier/prettier': 'error',
   },
